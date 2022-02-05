@@ -21,7 +21,8 @@ class Calculator {
     }
 
     chooseOperation(operation) {
-
+        this.operation = operation
+        // not finished
     }
 
     compute() {
@@ -47,6 +48,13 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText);
+        calculator.updateDisplay()
+    })
+})
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.chooseOperation(button.innerText);
         calculator.updateDisplay()
     })
 })
