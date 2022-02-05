@@ -16,8 +16,8 @@ class Calculator {
     }
 
     appendNumber(number) {
-        this.currentOperand = number
-
+        if(number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
@@ -41,3 +41,12 @@ const deleteButton = document.querySelector('[data-delete]');
 const equalButton = document.querySelector('[data-equals]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
+
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText);
+        calculator.updateDisplay()
+    })
+})
