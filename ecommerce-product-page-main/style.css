@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sneaker logo in nav */
+.company-logo {
+    margin: 40px;
+    padding-left: 80px;
+}
+
+/* Nav */
+nav {
+    background-color: rosybrown;
+    display: flex;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+    padding-top: 43px;
+}
+li a {
+    padding: 8px;
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+}
+.nav-right {
+    /* display: inline-block */
+}
+
+.cart-image {
+    
+}
