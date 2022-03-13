@@ -2,11 +2,12 @@ const choicesDisplay = document.querySelector('#choices')
 const resultDisplay = document.querySelector('#result')
 const choices = ['rock', 'paper', 'scissors']
 
-// Calls on the getResults method and displays what the result is based on the choice
+// Calls on the getResults method and displays what the result is based on users click
 const handleClick = (e) => {
     getResults(e.target.innerHTML, choices[Math.floor(Math.random() * choices.length)])
 }
 
+// Creates a button for each item in the choices array, displays the string on the button, based on what the user clicks 
 choices.forEach(choice => {
     const button = document.createElement('button')
     button.innerHTML = choice
