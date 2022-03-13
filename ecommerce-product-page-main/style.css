@@ -11,7 +11,7 @@
 
 /* Nav */
 nav {
-    background-color: rosybrown;
+
     display: flex;
 }
 ul {
@@ -29,10 +29,33 @@ li a {
     text-decoration: none;
     color: hsl(219, 9%, 45%);
 }
-.nav-right {
-    /* display: inline-block */
+
+/* How do I shift cart and avatar to right side of page? */
+
+.container {
+    height: auto;
+    overflow: hidden;
+    background-color: aqua;
+    margin-left: 150px;
+    margin-top: 150px;
 }
 
-.cart-image {
-    
+.right {
+    width: 180px;
+    float: right;
+    background-color: blue;
+}
+
+.left {
+    float: none;
+    width: auto;
+    overflow: hidden;
+    background-color: pink;
+}
+
+.current-pic {
+
+}
+.produc-pics {
+    border-radius: 25px;
 }
